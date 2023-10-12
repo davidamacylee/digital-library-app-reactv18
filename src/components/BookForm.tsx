@@ -39,32 +39,38 @@ const BookForm = ( props: BookFormProps ) => {
     return (
         <div>
             <form onSubmit={handleSubmit(onSubmit)}>
-                <div>
-                    <label htmlFor="title">Title</label>
-                    <Input {...register('title')} name='title' placeholder='Title'/>
-                </div>
-                <div>
-                    <label htmlFor="author">Author</label>
-                    <Input {...register('author')} name='author' placeholder='Author'/>
-                </div>
-                <div>
-                    <label htmlFor="publisher">Publisher</label>
-                    <Input {...register('publisher')} name='publisher' placeholder='Publisher'/>
-                </div>
-                <div>
-                    <label htmlFor="ISBN">ISBN</label>
-                    <Input {...register('ISBN')} name='ISBN' placeholder='ISBN'/>
-                </div>
-                <div>
-                    <label htmlFor="year_printed">Year Printed</label>
-                    <Input {...register('year_printed')} name='year_printed' placeholder='Year Printed'/>
-                </div>
-                <div>
-                    <label htmlFor="page_length">Page Length</label>
-                    <Input {...register('page_length')} name='page_length' placeholder='Page Length'/>
+                <div className="flex flex-row">
+                    <div className="flex flex-col mx-3">
+                        <div>
+                            <label htmlFor="title">Title</label>
+                            <Input {...register('title')} name='title' placeholder='Title'/>
+                        </div>
+                        <div>
+                            <label htmlFor="author">Author</label>
+                            <Input {...register('author')} name='author' placeholder='Author'/>
+                        </div>
+                        <div>
+                            <label htmlFor="publisher">Publisher</label>
+                            <Input {...register('publisher')} name='publisher' placeholder='Publisher'/>
+                        </div>
+                    </div>
+                    <div className="flex flex-col mx-3">
+                        <div>
+                            <label htmlFor="ISBN">ISBN</label>
+                            <Input {...register('ISBN')} name='ISBN' placeholder='ISBN'/>
+                        </div>
+                        <div>
+                            <label htmlFor="year_printed">Year Printed</label>
+                            <Input {...register('year_printed')} name='year_printed' placeholder='Year Printed'/>
+                        </div>
+                        <div>
+                            <label htmlFor="page_length">Page Length</label>
+                            <Input {...register('page_length')} name='page_length' placeholder='Page Length'/>
+                        </div>
+                    </div>
                 </div>
                 <div className="flex p-1">
-                    <Button className="flex justify-start m-3 bg-slate-300 p-2 rounded hover:bg-slate-800 text-yellow-700">
+                    <Button className="flex justify-start m-3 bg-yellow-800 p-2 rounded hover:bg-yellow-600 text-yellow-400 hover:text-yellow-200">
                         Submit
                     </Button>
                 </div>
